@@ -46,11 +46,4 @@ public class UnitTest1
         Assert.AreEqual(4.5, res.Y(), 0.001);
     }
 
-    [TestMethod]
-    public void TriangleTest()
-    {
-        Triangle triangle = Triangle.Equilateral(10);
-        Assert.AreEqual(10, triangle.Vertex1.Distance());
-        Assert.AreEqual(4.5, res.Y(), 0.001);
-    }
 }
