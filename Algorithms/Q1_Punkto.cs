@@ -1,7 +1,7 @@
 namespace Algorithms;
 using System;
 
-public class ExercicesS1
+public class Q1_Punkto
 {
     public static int Add(int a, int b){
         return a + b;
