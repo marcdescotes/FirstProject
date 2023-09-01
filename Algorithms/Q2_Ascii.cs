@@ -29,7 +29,7 @@ namespace Algorithms
             return staircase.ToString();
         }
 
-        public static void Main(string[] args)
+        public static void Main_Staircase(string[] args)
         {
             int height = 5;
             int width = 2;
