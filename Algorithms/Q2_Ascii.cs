@@ -1,22 +1,40 @@
-namespace Algorithms;
 using System;
+using System.Text;
 
-public class Q2_Ascii
+namespace Algorithms
 {
-
-public static void Main2(string[] args)
+    public class Q2_Ascii
     {
-        Question2(34);
+        public static string CreateStaircase(int height, int width)
+        {
+            if (height <= 0 || width <= 0)
+            {
+                return "";
+            }
 
+            StringBuilder staircase = new StringBuilder();
 
+            for (int i = 1; i <= height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    for (int k = 0; k < i; k++)
+                    {
+                        staircase.Append(" # ");
+                    }
+                    staircase.AppendLine();
+                }
+            }
+
+            return staircase.ToString();
+        }
+
+        public static void Main(string[] args)
+        {
+            int height = 5;
+            int width = 2;
+            string result = CreateStaircase(height, width);
+            Console.WriteLine(result);
+        }
     }
-
-
-
-public static void Question2(long num)
-    {
-
-    }
-
-
 }
