@@ -26,7 +26,6 @@ public class Q1_Moyenne
         double average = sum / numbers.Count;
         return average;
     }
-
 }
 
 

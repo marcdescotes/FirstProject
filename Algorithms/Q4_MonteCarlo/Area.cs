@@ -9,7 +9,6 @@ public class Area
         {
             throw new ArgumentNullException("Le carré ne peut pas être null.");
         }
-
         return Math.Pow(square.Cote, 2);
     }
 }

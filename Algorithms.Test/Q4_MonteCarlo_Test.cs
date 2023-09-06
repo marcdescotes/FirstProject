@@ -2,16 +2,16 @@ namespace Algorithms.Test;
 
 
 [TestClass]
-public class MathUtilsTest
+public class Q4_MonteCarlo_Test
 {
     [TestMethod]
-    public void TestPiEstimation()
+    public void TestPiEstimate()
     {
-        // Estimation de π avec un grand nombre de points
+        // Estimation de pi avec un grand nombre de points
         int numberOfPoints = 1000000;
         double estimatedPi = MathUtils.PiEstimate(numberOfPoints);
 
-        // Valeur attendue de π avec une précision de 10^-6
+        // Valeur attendue de pi avec une précision de 10^-6
         double expectedPi = 3.1415926535897932384626433832795028841971;
 
         // Tolérance acceptable

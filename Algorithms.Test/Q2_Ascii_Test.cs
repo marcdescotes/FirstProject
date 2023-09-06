@@ -5,60 +5,48 @@ namespace Algorithms.Test;
 public class Q2_Ascii_Test
 {
 
-        [TestMethod]
-        public void CreateStaircase_HeightZero_ReturnsEmptyString()
-        {
-            // Arrange
-            int height = 0;
-            int width = 3;
+    [TestMethod]
+    public void HeightZero_ReturnsEmptyString()
+    {
+        int height = 0;
+        int width = 3;
 
-            // Act
-            string result = Q2_Ascii.CreateStaircase(height, width);
+        string result = Q2_Ascii.CreateStaircase(height, width);
 
-            // Assert
-            Assert.AreEqual("", result);
-        }
+        Assert.AreEqual("", result);
+    }
 
-        [TestMethod]
-        public void CreateStaircase_WidthZero_ReturnsEmptyString()
-        {
-            // Arrange
-            int height = 2;
-            int width = 0;
+    [TestMethod]
+    public void WidthZero_ReturnsEmptyString()
+    {
+        int height = 2;
+        int width = 0;
 
-            // Act
-            string result = Q2_Ascii.CreateStaircase(height, width);
+        string result = Q2_Ascii.CreateStaircase(height, width);
 
-            // Assert
-            Assert.AreEqual("", result);
-        }
+        Assert.AreEqual("", result);
+    }
 
-        [TestMethod]
-        public void CreateStaircase_NegativeHeight_ReturnsEmptyString()
-        {
-            // Arrange
-            int height = -2;
-            int width = 3;
+    [TestMethod]
+    public void NegativeHeight_ReturnsEmptyString()
+    {
+        int height = -2;
+        int width = 3;
 
-            // Act
-            string result = Q2_Ascii.CreateStaircase(height, width);
+        string result = Q2_Ascii.CreateStaircase(height, width);
 
-            // Assert
-            Assert.AreEqual("", result);
-        }
+        Assert.AreEqual("", result);
+    }
 
-        [TestMethod]
-        public void CreateStaircase_NegativeWidth_ReturnsEmptyString()
-        {
-            // Arrange
-            int height = 2;
-            int width = -3;
+    [TestMethod]
+    public void NegativeWidth_ReturnsEmptyString()
+    {
+        int height = 2;
+        int width = -3;
 
-            // Act
-            string result = Q2_Ascii.CreateStaircase(height, width);
+        string result = Q2_Ascii.CreateStaircase(height, width);
 
-            // Assert
-            Assert.AreEqual("", result);
-        }
+        Assert.AreEqual("", result);
+    }
 
 }

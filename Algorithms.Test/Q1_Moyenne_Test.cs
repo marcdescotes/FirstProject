@@ -17,19 +17,24 @@ public class Q1_Moyenne_Test
         // Appeler la fonction CalculateAverage pour obtenir la moyenne calculée
         double actualAverage = Q1_Moyenne.CalculateAverage(testNumbers);
 
-        // Vérifier si la moyenne calculée correspond à la moyenne attendue avec une marge d'erreur très petite
+        // Vérifier si la moyenne calculée correspond à la moyenne attendue avec une petite marge d'erreur
         double margeErreur = 0.0001;
         Assert.AreEqual(expectedAverage, actualAverage, margeErreur);
+    }
 
+    [TestMethod]
+    public void EmptyListReturnsZero()
+    {
+        // Créer une liste vide
+        List<double> emptyList = new List<double>();
 
-        //   Assert.IsTrue(new List<double> ({34.1, 23.5}).IsValid());
-        //     Assert.IsFalse(new List<double> ("rdd", "dwdd").IsValid());
+        // Appeler la fonction CalculateAverage avec la liste vide
+        double actualAverage = Q1_Moyenne.CalculateAverage(emptyList);
 
-        // Q1_Moyenne list1 = new List<double> {34.1, 23.5};
-        //     Point point2 = new Point(5, 3);
-        //     Point res = point1.MidPointOf(point2);
-        //     Assert.AreEqual(3.5, res.X(), 0.001);
-        //     Assert.AreEqual(4.5, res.Y(), 0.001);
+        // La moyenne d'une liste vide doit être égale à zéro
+        double expectedAverage = 0;
+
+        Assert.AreEqual(expectedAverage, actualAverage);
     }
 
 }
