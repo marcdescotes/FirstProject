@@ -31,12 +31,6 @@ public class Square
         return absX <= halfCote && absY <= halfCote;
     }
 
-    // Calculer l'aire du carré
-    public double CalculerAire()
-    {
-        // Calculer l'aire d'un carré
-        return Math.Pow(Cote, 2);
-    }
 
     // Générer un point aléatoire à l'intérieur du carré en utilisant un générateur de nombres aléatoires
     public Point RandomPoint(Random random)
