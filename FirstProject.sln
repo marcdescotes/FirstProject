@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{C1B2A08A-1EA8-4E2B-8AAF-B10C75248F6C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Test", "Algorithms.Test\Algorithms.Test.csproj", "{A6F75A68-9E96-4570-9D95-5D6BD2A37684}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alchemy", "Alchemy\Alchemy.csproj", "{A607E775-705F-426A-9F91-341D4B468ACC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alchemy.Test", "Alchemy.Test\Alchemy.Test.csproj", "{18808A21-84B7-41B5-9B1E-57CB8D0F220A}"

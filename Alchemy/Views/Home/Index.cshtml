@@ -1,8 +1,56 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+</div>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="button-container">
+
+        @foreach (var robot in ViewData["Robot"] as List<Robot>)
+        {
+            <form asp-controller="Home" asp-action="ShowRobot" method="post">
+                <input type="hidden" name="selectedRobot" value="@robot.Name" />
+                <button type="submit">Show @robot.Name</button>
+            </form>
+        }
+    </div>
+</div>
+
+<div class="text-center">
+    @if (ViewData["SelectedName"] != null)
+    {
+        var selectedRobot = (ViewData["Robot"] as List<Robot>).FirstOrDefault(p => p.Name ==
+        ViewData["SelectedName"].ToString());
+
+        if (selectedRobot != null)
+        {
+            <img src="@selectedRobot.ImageUrl" />
+            <h2 class="display-4">@selectedRobot.Name</h2>
+            <p>@selectedRobot.Country</p>
+            <p>@selectedRobot.Height</p>
+            <p>@selectedRobot.Weight</p>
+        }
+    }
+
+<div id="new-robot"></div>
+    <form hx-post="/robots/create-robot" hx-ext="json-enc" hx-trigger="submit" hx-target="#new-robot"
+        hx-swap="afterbegin">
+
+        <label class="form-label">Nom
+            <input type=text name="name" class="form-control" placeholder="Bob">
+        </label>
+        <br>
+        <label class="form-label">Country
+            <input type=text name="country" class="form-control" placeholder="Lithuanie">
+        </label>
+        <br>
+        <label class="form-label">Weight
+            <input type=text name="weight" class="form-control" placeholder="130">
+        </label>
+        <br>
+        <label class="form-label">Height
+            <input type=text name="height" class="form-control" placeholder="180">
+        </label>
+        <input type=submit class="btn btn-primary">
+    </form>
+
 </div>
