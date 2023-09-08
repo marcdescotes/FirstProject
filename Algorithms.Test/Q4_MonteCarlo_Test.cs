@@ -18,6 +18,6 @@ public class Q4_MonteCarlo_Test
         double tolerance = 1e-6;
 
         // Vérification si l'estimation est proche de la valeur attendue avec la tolérance
-        Assert.IsFalse(Math.Abs(estimatedPi - expectedPi) < tolerance);
+        Assert.IsTrue(Math.Abs(estimatedPi - expectedPi) < tolerance);
     }
 }
